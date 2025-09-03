@@ -158,7 +158,6 @@ All endpoints live under `app/api/`.
 - Do not expose `/api/whmcs` to browsers for arbitrary calls; consume it server‑to‑server only
 
 ## Requirements & constraints
-- Currency: NGN only (merchant policy)
 - Requires WHMCS instance and Paystack account
 - DNS status checks use Google DNS resolver (best‑effort)
 
