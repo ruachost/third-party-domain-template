@@ -25,7 +25,7 @@ export default function Home() {
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center gap-2">
               <Globe className="h-8 w-8 text-primary" />
-              <h1 className="text-xl font-bold">Ruachost DomainHub</h1>
+              <h1 className="text-xl font-bold hidden sm:block">Ruachost DomainHub</h1>
             </div>
             
             <div className="flex items-center gap-3">
@@ -40,8 +40,8 @@ export default function Home() {
                 onClick={() => setIsCartOpen(true)}
                 className="relative"
               >
-                <ShoppingCart className="h-4 w-4 mr-2" />
-                Cart
+                <ShoppingCart className="h-4 w-4 sm:mr-2" />
+                <span className="hidden sm:inline">Cart</span>
                 {totalItems > 0 && (
                   <Badge variant="destructive" className="absolute -top-2 -right-2 h-5 w-5 p-0 flex items-center justify-center text-xs">
                     {totalItems}
@@ -68,11 +68,11 @@ export default function Home() {
               </TabsTrigger>
             </TabsList>
 
-            <TabsContent value="search" className="mt-0">
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+            <TabsContent value="search" className="mt-0 md:px-24">
+              <h1 className="text-4xl lg:text-5xl font-semibold lg:font-bold mb-6">
                 Find Your Perfect Domain
               </h1>
-              <p className="text-xl md:text-2xl mb-8 text-primary-foreground/90">
+              <p className="text-lg md:text-2xl mb-8 text-primary-foreground/90">
                 Search, compare, and purchase domains with ease. Integrated with WHMCS and secure Paystack payments.
               </p>
               <div className="max-w-3xl mx-auto">
@@ -80,11 +80,11 @@ export default function Home() {
               </div>
             </TabsContent>
 
-            <TabsContent value="connect" className="mt-0">
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+            <TabsContent value="connect" className="mt-0 md:px-24">
+              <h1 className="text-4xl lg:text-5xl font-semibold lg:font-bold mb-6">
                 Connect Your Existing Domain
               </h1>
-              <p className="text-xl md:text-2xl mb-8 text-primary-foreground/90">
+              <p className="text-lg md:text-2xl mb-8 text-primary-foreground/90">
                 Connect your existing domain to our hosting services. Keep ownership while getting professional hosting.
               </p>
               <div className="max-w-3xl mx-auto">

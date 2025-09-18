@@ -170,7 +170,7 @@ export default function DomainSearch({ onSearchComplete }: DomainSearchProps) {
           </CardDescription>
         </CardHeader>
         <CardContent>
-          <div className="flex gap-2">
+          <div className="flex flex-col sm:flex-row gap-2">
             <div className="relative flex-1">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground h-4 w-4" />
               <Input
@@ -182,7 +182,7 @@ export default function DomainSearch({ onSearchComplete }: DomainSearchProps) {
                 className="pl-10"
               />
             </div>
-            <div className="w-44">
+            <div className="w-full sm:w-44">
               <Input
                 type="text"
                 inputMode="numeric"
@@ -195,7 +195,7 @@ export default function DomainSearch({ onSearchComplete }: DomainSearchProps) {
             <Button
               onClick={() => handleSearch(searchTerm)}
               disabled={isSearching || !searchTerm.trim()}
-              className="px-6"
+              className="px-6 w-full sm:w-auto bg-black hover:bg-gray-800 text-white"
             >
               {isSearching ? (
                 <Loader2 className="h-4 w-4 animate-spin" />
@@ -222,7 +222,7 @@ export default function DomainSearch({ onSearchComplete }: DomainSearchProps) {
                   variant="outline"
                   size="sm"
                   onClick={() => handleSuggestionClick(suggestion)}
-                  className="rounded-full"
+                  className="rounded-full text-xs sm:text-sm"
                 >
                   {suggestion}
                 </Button>
@@ -243,7 +243,7 @@ export default function DomainSearch({ onSearchComplete }: DomainSearchProps) {
               {searchResults.map((result) => (
                 <div
                   key={result.domain}
-                  className="flex items-center justify-between p-4 border rounded-lg"
+                  className="flex flex-col sm:flex-row sm:items-center justify-between p-4 border rounded-lg gap-4"
                 >
                   <div className="flex items-center gap-3">
                     {result.available ? (
@@ -259,9 +259,9 @@ export default function DomainSearch({ onSearchComplete }: DomainSearchProps) {
                     </div>
                   </div>
                   
-                  <div className="flex items-center gap-4">
+                  <div className="flex flex-col sm:flex-row sm:items-center gap-4">
                     {result.available && (
-                      <div className="text-right">
+                      <div className="text-left sm:text-right">
                         <div className="font-semibold">
                           {formatNaira(result.price)}
                         </div>
@@ -272,7 +272,7 @@ export default function DomainSearch({ onSearchComplete }: DomainSearchProps) {
                     {result.available && (
                       <Button
                         onClick={() => handleAddToCart(result)}
-                        className="flex items-center gap-2"
+                        className="flex items-center gap-2 w-full sm:w-auto"
                       >
                         <Plus className="h-4 w-4" />
                         Add to Cart
@@ -303,7 +303,7 @@ export default function DomainSearch({ onSearchComplete }: DomainSearchProps) {
                   variant="outline"
                   size="sm"
                   onClick={() => handleSuggestionClick(suggestion)}
-                  className="rounded-full"
+                  className="rounded-full text-xs sm:text-sm"
                 >
                   {suggestion}
                 </Button>

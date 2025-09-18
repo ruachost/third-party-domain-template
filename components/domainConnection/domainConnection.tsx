@@ -205,7 +205,7 @@ export function DomainConnectionForm() {
               }
             })}
             type="text"
-            placeholder="yourdomain.com"
+            placeholder="try notaggroup.org"
             className="w-full px-3 py-2 border rounded-md focus:ring-2 focus:ring-blue-500"
           />
           {errors.domain && (
