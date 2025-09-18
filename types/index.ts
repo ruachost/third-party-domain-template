@@ -151,7 +151,6 @@ export interface WHMCSApiResponse<T = any> {
   cclastfour?: any;
   gatewayid?: any;
   groupid?: number;
-  status?: string;
   credit?: string;
   taxexempt?: boolean;
   latefeeoveride?: boolean;
